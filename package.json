@@ -1,27 +1,37 @@
 {
-  "name": "logindemo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "public/index.html",
-  "scripts": {
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rhildred/loginDemo.git"
-  },
-  "keywords": [
-    "framework7",
-    "V4",
-    "firebase",
-    "oauth",
-    "email",
-    "password"
-  ],
-  "author": "Rich Hildred",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/rhildred/loginDemo/issues"
-  },
-  "homepage": "https://github.com/rhildred/loginDemo#readme"
+    "name": "logindemo",
+    "version": "1.0.0",
+    "description": "",
+    "main": "public/index.html",
+    "scripts": {
+        "start": "parcel public/index.html --no-hmr --port $PORT",
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rhildred/loginDemo.git"
+    },
+    "keywords": [
+        "framework7",
+        "V4",
+        "firebase",
+        "oauth",
+        "email",
+        "password"
+    ],
+    "author": "Rich Hildred",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/rhildred/loginDemo/issues"
+    },
+    "homepage": "https://github.com/rhildred/loginDemo#readme",
+    "dependencies": {
+        "framework7": "^4.4.6"
+    },
+    "devDependencies": {
+        "parcel-bundler": "^1.12.3",
+        "posthtml-expressions": "^1.1.1",
+        "posthtml-include": "^1.2.0",
+        "posthtml-md": "^1.1.0"
+    }
 }
