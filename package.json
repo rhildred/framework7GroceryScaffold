@@ -1,0 +1,27 @@
+{
+  "name": "logindemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "public/index.html",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhildred/loginDemo.git"
+  },
+  "keywords": [
+    "framework7",
+    "V4",
+    "firebase",
+    "oauth",
+    "email",
+    "password"
+  ],
+  "author": "Rich Hildred",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rhildred/loginDemo/issues"
+  },
+  "homepage": "https://github.com/rhildred/loginDemo#readme"
+}
