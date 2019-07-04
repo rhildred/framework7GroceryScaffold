@@ -1,5 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<!--
+  Customize this policy to fit your own app's needs. For more guidance, see:
+  https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+  Some notes:
+  * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+  * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+  * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+  * Enable inline JS: add 'unsafe-inline' to default-src
+-->
+	<meta http-equiv="Content-Security-Policy"
+		content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="theme-color" content="#2196f3">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<title>Login Demo</title>
+	<link rel="apple-touch-icon" href="img/f7-icon-square.png">
+	<link rel="icon" href="img/f7-icon.png">
+	<link rel="stylesheet" href="./index.css">
+</head>
+
 <body>
-<article class="markdown-body" md>
-  <include src="./README.md"></include>
-</article>
+	<div id="app">
+		<!-- Status bar overlay for fullscreen mode-->
+		<div class="statusbar"></div>
+		<!-- Main view -->
+		<div class="view view-main view-init ios-edges" data-url="/">
+			<div class="page">
+				<nav class="navbar">
+					<div class="navbar-inner">
+						<h1 class="title sliding">Login Demo</h1>
+					</div>
+				</nav>
+				<main class="page-content">
+					<!-- content goes there -->
+					<div class="block">
+						<div class="row">&nbsp;
+							<p id="loginSignin" class="segmented segmented-raised">
+								<a href="#" class="button login-screen-open" data-login-screen=".signupYes">Sign Up</button>
+								<a href="#" class="button button-active login-screen-open" data-login-screen=".loginYes">Sign In</a>
+							</p>
+						</div>
+						<article class="markdown-body" md>
+							<include src="./README.md"></include>
+						</article>
+					</div>
+				</main>
+				<div class="login-screen loginYes">
+					<div class="view">
+						<div class="page">
+							<div class="page-content login-screen-content">
+								<div class="login-screen-title">Login Demo</div>
+								<form id="loginForm">
+									<div class="list">
+										<ul>
+											<li class="item-content item-input">
+												<div class="item-inner">
+													<div class="item-title item-label">Username</div>
+													<div class="item-input-wrap">
+														<input type="text" name="username" placeholder="Your email">
+                    </div>
+													</div>
+											</li>
+											<li class="item-content item-input">
+												<div class="item-inner">
+													<div class="item-title item-label">Password</div>
+													<div class="item-input-wrap">
+														<input type="password" name="password" placeholder="Your password">
+                    </div>
+													</div>
+											</li>
+										</ul>
+									</div>
+									<div class="list">
+										<ul>
+											<li><a id="signInButton" class="item-link list-button" href="#">Sign In</a></li>
+										</ul>
+										<div class="block-footer">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											<p><a class="link login-screen-close" href="#">Close Login Screen</a></p>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="login-screen signupYes">
+					<div class="view">
+						<div class="page">
+							<div class="page-content login-screen-content">
+								<div class="login-screen-title">Signup</div>
+								<form id="signUpForm">
+									<div class="list">
+										<ul>
+											<li class="item-content item-input">
+												<div class="item-inner">
+													<div class="item-title item-label">Username</div>
+													<div class="item-input-wrap">
+														<input type="text" name="username" placeholder="Your email">
+                    </div>
+													</div>
+											</li>
+											<li class="item-content item-input">
+												<div class="item-inner">
+													<div class="item-title item-label">Password</div>
+													<div class="item-input-wrap">
+														<input type="password" name="password" placeholder="Your password">
+                    </div>
+													</div>
+											</li>
+										</ul>
+									</div>
+									<div class="list">
+										<ul>
+											<li><a id="signUpButton" class="item-link list-button" href="#">Sign Up</a></li>
+										</ul>
+										<div class="block-footer">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											<p><a class="link login-screen-close" href="#">Close Login Screen</a></p>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+	<script src="./index.js"></script>
 </body>
+
+</html>
