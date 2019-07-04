@@ -40,16 +40,24 @@
 				</nav>
 				<main class="page-content">
 					<!-- content goes there -->
-					<div class="block">
-						<div class="row">&nbsp;
-							<p id="loginSignin" class="segmented segmented-raised">
-								<a href="#" class="button login-screen-open" data-login-screen=".signupYes">Sign Up</button>
-								<a href="#" class="button button-active login-screen-open" data-login-screen=".loginYes">Sign In</a>
-							</p>
+					<div class="tabs">
+						<div id="tab1" class="block tab tab-active">
+							<div class="row">&nbsp;
+								<p id="loginSignin" class="segmented segmented-raised">
+									<a href="#" class="button login-screen-open" data-login-screen=".signupYes">Sign
+										Up</a>
+									<a href="#" class="button button-active login-screen-open"
+										data-login-screen=".loginYes">Sign In</a>
+								</p>
+							</div>
+							<article class="markdown-body" md>
+								<include src="./README.md"></include>
+							</article>
 						</div>
-						<article class="markdown-body" md>
-							<include src="./README.md"></include>
-						</article>
+						<div id="tab2" class="block tab">
+                            <div class="row">&nbsp;<button id="logout" class="button button-raised">Logout</button></div>
+							Now we are logged in.
+						</div>
 					</div>
 				</main>
 				<div class="login-screen loginYes">
@@ -80,10 +88,11 @@
 									</div>
 									<div class="list">
 										<ul>
-											<li><a id="signInButton" class="item-link list-button" href="#">Sign In</a></li>
+											<li><a id="signInButton" class="item-link list-button" href="#">Sign In</a>
+											</li>
 										</ul>
 										<div class="block-footer">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											<p id="signInError"></p>
 											<p><a class="link login-screen-close" href="#">Close Login Screen</a></p>
 										</div>
 									</div>
@@ -120,10 +129,11 @@
 									</div>
 									<div class="list">
 										<ul>
-											<li><a id="signUpButton" class="item-link list-button" href="#">Sign Up</a></li>
+											<li><a id="signUpButton" class="item-link list-button" href="#">Sign Up</a>
+											</li>
 										</ul>
 										<div class="block-footer">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+											<p id="signUpError"></p>
 											<p><a class="link login-screen-close" href="#">Close Login Screen</a></p>
 										</div>
 									</div>
