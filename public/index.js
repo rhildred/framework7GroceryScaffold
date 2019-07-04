@@ -13,13 +13,13 @@ const app = new Framework7({
   },
 });
 
-$$("#signInButton").on("click", evt=>{
+$$("#signInButton").on("click", ()=>{
     var formData = app.form.convertToData('#loginForm');
     alert("clicked Sign in: " + JSON.stringify(formData));
 
 });
 
-$$("#signUpButton").on("click", evt=>{
+$$("#signUpButton").on("click", ()=>{
     var formData = app.form.convertToData('#signUpForm');
     alert("clicked Sign Up: " + JSON.stringify(formData));
 
