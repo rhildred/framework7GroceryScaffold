@@ -54,7 +54,7 @@ $$("#signUpButton").on("click", () => {
             // could save extra info in a profile here I think.
             app.loginScreen.close(".signupYes", true);
         }
-    ).catch(function(error) {
+    ).catch((error) => {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -66,9 +66,9 @@ $$("#signUpButton").on("click", () => {
 });
 
 $$("#logout").on("click", () => {
-    firebase.auth().signOut().then(function() {
+    firebase.auth().signOut().then(() => {
         // Sign-out successful.
-    }).catch(function(error) {
+    }).catch(() => {
         // An error happened.
     });
 });
