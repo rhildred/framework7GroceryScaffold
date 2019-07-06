@@ -8,10 +8,10 @@ The index.html contains 2 login-screen classes to match the 2 buttons.
 
 ```
 
-				<div class="login-screen signupYes">
-					<div class="view">
-						<div class="page">
-							<div class="page-content login-screen-content">
+<div class="login-screen signupYes">
+    <div class="view">
+        <div class="page">
+            <div class="page-content login-screen-content">
 
 
 ```
@@ -28,10 +28,10 @@ and
 
 ```
 
-				<div class="login-screen loginYes">
-					<div class="view">
-						<div class="page">
-							<div class="page-content login-screen-content">
+<div class="login-screen loginYes">
+    <div class="view">
+        <div class="page">
+            <div class="page-content login-screen-content">
 
 
 ```
@@ -48,6 +48,7 @@ to go with the button:
 Using Dom7 we capture the click event on the sign in button:
 
 ```
+
 $$("#signUpButton").on("click", () => {
     var formData = app.form.convertToData('#signUpForm');
     //alert("clicked Sign Up: " + JSON.stringify(formData));

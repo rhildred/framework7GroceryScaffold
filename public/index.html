@@ -24,6 +24,9 @@
 	<link rel="apple-touch-icon" href="img/f7-icon-square.png">
 	<link rel="icon" href="img/f7-icon.png">
 	<link rel="stylesheet" href="./index.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+		integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+		crossorigin="" />
 </head>
 
 <body>
@@ -50,13 +53,12 @@
 										data-login-screen=".loginYes">Sign In</a>
 								</p>
 							</div>
-							<article class="markdown-body" md>
-								<include src="./README.md"></include>
-							</article>
+							<p>this is a demo of a leaflet map, integrated with firebase for saving notes.</p>
 						</div>
 						<div id="tab2" class="block tab">
-                            <div class="row">&nbsp;<button id="logout" class="button button-raised">Logout</button></div>
-							Now we are logged in.
+							<div class="row">&nbsp;<button id="logout" class="button button-raised">Logout</button>
+							</div>
+							<div id="map-here"></div>
 						</div>
 					</div>
 				</main>

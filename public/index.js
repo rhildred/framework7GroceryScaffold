@@ -4,6 +4,7 @@ import firebase from 'firebase/app';
 import 'firebase/database';
 import 'firebase/auth';
 import config from "./firebase.js";
+import './map.js';
 
 firebase.initializeApp(config);
 const $$ = Dom7;
