@@ -1,5 +1,7 @@
 import L from "leaflet";
 import Dom7 from 'dom7';
+import Framework7 from 'framework7/framework7.esm.bundle';
+import app from "./F7App.js";
 
 const $$ = Dom7;
 
@@ -16,6 +18,13 @@ function showPosition(oPosition) {
         maxZoom: 18,
         attribution: attribution
     }).addTo(mymap);
+
+    mymap.on("contextmenu", (evt) => {
+        // right click ... this is a long press on a phone
+        $$("#lat").html(evt.latlng.lat);
+        $$("#lng").html(evt.latlng.lng);
+        app.sheet.open(".my-sheet", true);
+    });
 }
 
 $$("#tab2").on("tab:show", () => {

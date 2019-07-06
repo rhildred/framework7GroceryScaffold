@@ -5,19 +5,11 @@ import 'firebase/database';
 import 'firebase/auth';
 import config from "./firebase.js";
 import './map.js';
+import app from "./F7App.js";
 
 firebase.initializeApp(config);
 const $$ = Dom7;
 
-// Init F7
-const app = new Framework7({
-    root: '#app',
-    theme: 'auto',
-    // Fix for iPhone X notch
-    statusbar: {
-        overlay: Framework7.device.ios ? Framework7.device.webView || Framework7.device.cordova : 'auto',
-    },
-});
 
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
