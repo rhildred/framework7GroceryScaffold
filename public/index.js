@@ -1,7 +1,6 @@
 import Framework7 from 'framework7/framework7.esm.bundle';
 import Dom7 from 'dom7';
 import firebase from 'firebase/app';
-import 'firebase/database';
 import 'firebase/auth';
 import config from "./firebase.js";
 import './map.js';
@@ -21,7 +20,8 @@ firebase.auth().onAuthStateChanged((user) => {
     }
 });
 
-$$("#signInButton").on("click", () => {
+$$("#loginForm").on("submit", (evt) => {
+    evt.preventDefault();
     var formData = app.form.convertToData('#loginForm');
     firebase.auth().signInWithEmailAndPassword(formData.username, formData.password).then(
         () => {
@@ -39,7 +39,8 @@ $$("#signInButton").on("click", () => {
 
 });
 
-$$("#signUpButton").on("click", () => {
+$$("#signUpForm").on("submit", (evt) => {
+    evt.preventDefault();
     var formData = app.form.convertToData('#signUpForm');
     //alert("clicked Sign Up: " + JSON.stringify(formData));
     firebase.auth().createUserWithEmailAndPassword(formData.username, formData.password).then(
