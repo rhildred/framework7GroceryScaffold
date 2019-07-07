@@ -5,7 +5,11 @@
     "main": "public/index.html",
     "scripts": {
         "start": "parcel public/index.html --no-hmr --port $PORT",
-        "test": "jest"
+        "test": "jest",
+        "init": "firebase init",
+        "deploy": "firebase deploy",
+        "login": "firebase login  --no-localhost",
+        "use": "firebase use --add"
     },
     "repository": {
         "type": "git",
@@ -34,6 +38,7 @@
         "material-design-icons": "^3.0.1"
     },
     "devDependencies": {
+        "firebase-tools": "^7.0.2",
         "parcel-bundler": "^1.12.3",
         "posthtml-expressions": "^1.1.1",
         "posthtml-include": "^1.2.0",

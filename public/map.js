@@ -1,6 +1,7 @@
 import L from "leaflet";
 import Dom7 from 'dom7';
 import Framework7 from 'framework7/framework7.esm.bundle';
+// app is the F7 instance
 import app from "./F7App.js";
 import firebase from 'firebase/app';
 import 'firebase/database';
@@ -29,7 +30,9 @@ function showPosition(oPosition) {
         $$("#lng").html(evt.latlng.lng);
         app.sheet.open(".my-sheet", true);
         $$(".my-sheet").on("submit", e => {
+            //submitting a new note
             e.preventDefault();
+            //evt is a closure so we need to use e here so that we can see it
             const sUser = firebase.auth().currentUser.uid;
             const waypointID = new Date().toISOString().replace(".", "_");
             const oNote = $$("#theNote");
@@ -47,14 +50,6 @@ function showPosition(oPosition) {
 
         })
     });
-}
-
-$$("#tab2").on("tab:show", () => {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        alert("geolocation not supported");
-    }
     const sUser = firebase.auth().currentUser.uid;
     firebase.database().ref('waypoints/'+ sUser).on("value", snapshot => {
         let oWaypoints = snapshot.val();
@@ -65,6 +60,14 @@ $$("#tab2").on("tab:show", () => {
             marker.bindPopup(oWaypoint.note).openPopup();
         });
     });
+}
+
+$$("#tab2").on("tab:show", () => {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        alert("geolocation not supported");
+    }
 
 });
 
