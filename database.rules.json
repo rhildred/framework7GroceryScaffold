@@ -2,7 +2,7 @@
   "rules": {
     ".read": false,
     ".write": false,
-    "waypoints": {
+    "groceries": {
       "$uid": {
         ".read": "auth != null && auth.uid == $uid",
         ".write": "auth != null && auth.uid == $uid"

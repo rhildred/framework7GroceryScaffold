@@ -3,8 +3,8 @@ import Dom7 from 'dom7';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import config from "./firebase.js";
-import './map.js';
 import app from "./F7App.js";
+import "./grocery.js";
 
 firebase.initializeApp(config);
 const $$ = Dom7;
