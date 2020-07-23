@@ -2,7 +2,13 @@
 
 ## firebase framework7 v4 login demo for a CAPSTONE team.
 
-This is a demo of a Framework7 login using Firebase to login and create a profile.
+This is a demo of a Framework7 login using Firebase to login and create a profile. To run in your local environment.
+
+```
+
+npx http-server
+
+```
 
 The index.html contains 2 login-screen classes to match the 2 buttons.
 
@@ -70,3 +76,5 @@ $$("#signUpButton").on("click", () => {
 
 
 ```
+
+There is also a database.rules.json file that you can plug in to your firebase console. In your firebase console you will also need to set up the email and password provider.

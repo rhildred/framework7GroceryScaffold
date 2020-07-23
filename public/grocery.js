@@ -1,11 +1,10 @@
-import Framework7 from 'framework7/framework7.esm.bundle';
-import $$ from 'dom7';
-import firebase from 'firebase/app';
+import 'https://cdnjs.cloudflare.com/ajax/libs/framework7/5.7.10/js/framework7.bundle.js';
+import "https://cdnjs.cloudflare.com/ajax/libs/firebase/7.16.0/firebase-app.min.js";
+import "https://cdnjs.cloudflare.com/ajax/libs/firebase/7.16.0/firebase-database.min.js";
+import "https://cdnjs.cloudflare.com/ajax/libs/firebase/7.16.1/firebase-auth.min.js";
 import app from "./F7App.js";
-import 'firebase/database';
-import 'firebase/auth';
 
-
+const $$ = Dom7;
 
 $$("#tab2").on("tab:show", () => {
     //put in firebase ref here

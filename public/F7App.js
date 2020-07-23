@@ -1,4 +1,4 @@
-import Framework7 from 'framework7/framework7.esm.bundle';
+import 'https://cdnjs.cloudflare.com/ajax/libs/framework7/5.7.10/js/framework7.bundle.js';
 
 // Init F7
 const app = new Framework7({
