@@ -6,3 +6,4 @@ package-lock.json
 firebase.js
 .firebase/
 .firebaserc
+.DS_Store
