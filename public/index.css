@@ -35,3 +35,7 @@
 #tab2{
     min-height:75vh;
 }
+
+.completed  {
+    text-decoration: line-through;
+}
